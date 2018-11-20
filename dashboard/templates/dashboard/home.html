@@ -4,5 +4,27 @@
 
   <body>
     <h1>Hello World !! you are not just a piece of paper </h1>
+    <form method='POST' action='{% url 'login' %}'>
+      {% csrf_token %}
+      <input type='text' name='username' id='username'>
+      <input type='password' name='password' id='password'>
+      <button type='submit'>submit</button>
+    </form>
+    <hr>
+    <p>----------------------------------------------------</p>
+    <form method='POST' action='{% url 'registration' %}'>
+      {% csrf_token %}
+      <label for='username'>Username</label>
+      <input type='username' name='username' id='username'>
+      <label form='password'>Password</label>
+      <input type='password' name='password' id='password'>
+      <label for='email'>email</input>
+      <input type='email' name='email' id='email'>
+      <label for='first_name'>First Name</label>
+      <input type='text' name='first_name' id='first_name'>
+      <label for='description'>Description</label>
+      <input type='text' name='description' id='description'>
+      <button type='submit'>submit</button>
+    </form>
   </body>
 </head>

@@ -1,0 +1,15 @@
+<head>
+<body>
+<form method='POST'>
+  {% csrf_token %}
+  {{form.as_p}}
+<lable for='username'>Username</lable>
+  <input type='text' id='username' name='username'>
+  <lable for='password'>Password</label>
+    <input  type='password' id='password' name='password'>
+  <input type='submit'>
+</form>
+</body>
+
+
+</head>
